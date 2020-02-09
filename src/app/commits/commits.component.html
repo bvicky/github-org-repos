@@ -1,0 +1,33 @@
+<div class="min-jumbotron" role="alert">
+  <div class="container">
+    <h1 class="text-center p-3">{{company | titlecase}}</h1>
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="mt-3 mb-3">List of Recent Commits</h2>
+  <h3 *ngIf="repoCommits && repoCommits.length === 0 "> Sorry No commits were found for the repo</h3>
+ <table class="table" *ngIf="repoCommits.length > 0">
+   <thead>
+    <th class="col-width">Date Committed</th>
+    <th>Commit Mesage</th>
+    <th>Author</th>
+   </thead>
+   <tbody>
+    <tr *ngFor="let repo of repoCommits">
+      <td>{{repo.commit.author.date | date:'medium'}}</td>
+      <td>{{repo.commit.message}}</td>
+      <td class="avatar">
+        <span *ngIf="repo.author?.avatar_url">
+          <img src="{{repo.author.avatar_url}}" class="img-thumbnail">
+        </span>
+        <p>{{repo.commit.author.name}}</p>
+      </td>
+
+    </tr>
+   </tbody>
+ </table>
+</div>
+
+
+

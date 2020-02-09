@@ -1,0 +1,61 @@
+.container-fluid{
+  padding: 0;
+  margin: 0;
+}
+
+.jumbotron {
+  display: flex;
+  background-color: #1c79b8;
+  color: white;
+  margin-bottom: 0;
+}
+
+.avatar_content {
+  margin-left: 50px;
+}
+
+.avatar_content a{
+  color: white;
+  font-size: 16px;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.avatar_content span{
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.avatar img {
+  width: 150px ;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #8aabbb;
+  box-shadow: 5px 5px 25px #8aabbb;
+  background-color: white;
+}
+
+.bar {
+  position: relative;
+  padding: 12px 20px;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 1px;
+  box-shadow: 1px 1px 5px #8aabbb;
+}
+
+.repo_desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.card {
+  height: 250px;
+}
+
+.icon_sort {
+  cursor: pointer;
+}

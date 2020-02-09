@@ -1,0 +1,36 @@
+.min-jumbotron{
+  display: flex;
+  background-color: #1c79b8;
+  color: white;
+  margin-bottom: 0;
+  height: 100px;
+}
+
+
+.min-jumbotron img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 5px solid #8aabbb;
+  box-shadow: 5px 5px 25px #8aabbb;
+  background-color: white;
+}
+
+.avatar img{
+  /*height: 200px;*/
+  /*width: 200px;*/
+  border: 1px solid #8aabbb;
+  border-radius: 100%;
+}
+
+table th{
+  text-align: center;
+}
+
+table tbody {
+  text-align: center;
+}
+
+.col-width {
+  width: 200px;
+}
