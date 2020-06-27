@@ -1,3 +1,7 @@
+# About
+
+Built an interactive UI to display a list of an arbitrary user-specified organization's GitHub projects ranked by meaningful metrics.
+
 # GithubOrg
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
