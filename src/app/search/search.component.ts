@@ -34,10 +34,10 @@ export class SearchComponent implements OnInit {
      };
     if (this.repoService.orgName.length > 0) {
       const result = await this.repoService.getByName(params);
-      if (result) {
-        this.router.navigate(['/repos']);
-      } else {
+      if (result['message'] === 'Not Found') {
         this.router.navigate(['/error']);
+      } else {
+        this.router.navigate(['/repos']);
       }
     }
   }
