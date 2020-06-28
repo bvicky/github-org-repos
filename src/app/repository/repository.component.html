@@ -1,4 +1,12 @@
 <div class="container-fluid">
+  <div class="row" style="background-color: #1c79b8; color: white">
+    <div class="col-sm-12">
+      <h6 class="float-left back" (click)="backToSearch()"> <i class="fas fa-chevron-left"></i> Back to
+        Search</h6>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
   <div class="jumbotron">
       <div class="avatar">
         <img src="{{repositories[0]?.owner.avatar_url}}" />

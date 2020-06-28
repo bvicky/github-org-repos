@@ -54,7 +54,9 @@ export class RepositoryService {
     };
     const response = await fetch(url, reqParams);
     this.redirectToError(response);
-    this.getPagination(response);
+    if (Object.keys(response.headers).length !== 0) {
+      this.getPagination(response);
+    }
     const result = await response.json();
     this.commits = result;
     return this.commits;
@@ -79,7 +81,9 @@ export class RepositoryService {
     };
     const response = await fetch(url, reqParams);
     this.redirectToError(response);
-    this.getPagination(response);
+    if (Object.keys(response.headers).length !== 0) {
+      this.getPagination(response);
+    }
     const result = await response.json();
     this.repos = result;
     return this.repos;
@@ -111,7 +115,9 @@ export class RepositoryService {
 
     const response = await fetch(paginatedUrl, reqParams);
     this.redirectToError(response);
-    this.getPagination(response);
+    if (Object.keys(response.headers).length !== 0) {
+      this.getPagination(response);
+    }
 
     if (filter === Assets.FullName) {
       const result = await response.json();

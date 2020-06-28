@@ -16,15 +16,16 @@ export class CommitsComponent implements OnInit {
               private repoService: RepositoryService) {
   }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<any> {
    const owner =  this.route.snapshot.paramMap.get('owner');
    const name =  this.route.snapshot.paramMap.get('name');
-   this.repoService.getLatestCommits(owner, name).then(data => {
-     this.repoCommits = data;
-   });
+   const repoCommitsData = await this.repoService.getLatestCommits(owner, name);
+   this.repoCommits = repoCommitsData as any;
    this.company = owner;
+  }
 
-
+  navigateToRepo() {
+    this.router.navigate(['/repos']);
   }
 
 }

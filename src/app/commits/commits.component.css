@@ -21,6 +21,8 @@
   /*width: 200px;*/
   border: 1px solid #8aabbb;
   border-radius: 100%;
+  width: 150px;
+  height: 150px;
 }
 
 table th{
@@ -33,4 +35,9 @@ table tbody {
 
 .col-width {
   width: 200px;
+}
+
+.back {
+  cursor: pointer;
+  margin-top:10px;
 }

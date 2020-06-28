@@ -15,7 +15,7 @@ export class RepositoryComponent implements OnInit {
   filterOption = Assets.FullName;
   sortOrder = Assets.Descending;
   showDescending = true;
-  paginated = {}
+  paginated = {};
 
   constructor(private router: Router,
               private repoService: RepositoryService) {
@@ -33,6 +33,10 @@ export class RepositoryComponent implements OnInit {
     if (this.repoService.repos.length === 0 ) {
       this.router.navigate(['/']);
     }
+  }
+
+  backToSearch() {
+    this.router.navigate(['/']);
   }
 
   async filterResults() {
